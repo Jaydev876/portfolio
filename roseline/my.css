@@ -1,0 +1,299 @@
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #222;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  background: #e91e63;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover{
+  box-shadow: 0 0 4px black;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #111;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: block;
+}
+.slideshow-container {
+    width: 100%;
+    height: 20vh;
+    background-color: #333;
+    top: 0;
+    margin-top: 0.1%;
+    
+   
+}
+/* Nav links (mobile) */
+.nav-links {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #111;
+  display: none;
+  flex-direction: column;
+}
+
+.nav-links li {
+  border-top: 1px solid #333;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+.nav-links a:hover{
+  color: red;
+}
+
+/* Toggle menu */
+.menu-toggle:checked ~ .nav-links {
+  display: flex;
+}
+
+/* ===== HERO TEXT ===== */
+.text {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f7f7f7;
+  box-shadow: 0 0 2px #e91e63;
+}
+
+.text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.text p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* ===== PRODUCTS ===== */
+section {
+  padding: 30px 15px;
+}
+
+.top,
+.wig {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.min-class {
+  border: 1px solid #eee;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* ===== WIG TABLE (MOBILE FIX) ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Make table scrollable on small screens */
+#wigs {
+  overflow-x: auto;
+}
+
+/* ===== PERFUME SECTION ===== */
+.perfume {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.sec-perfume {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.sec-2perfume {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #e91e63;
+}
+
+.third-perfume {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  gap: 2px; 
+}
+
+.third-perfume img {
+  width: 90px;
+  
+  
+}
+
+.text-perfume p,
+.text-perfume h4 {
+  margin-bottom: 5px;
+}
+
+
+
+
+/* ===== CONTACT ===== */
+.contact {
+  background: #fafafa;
+}
+/* ===== GOV SECTION ===== */
+.gov {
+  background: white;
+  color: black;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+
+.gov-info {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.gov-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #e91e63;
+}
+
+.gov-info p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: black;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: justify;
+}
+
+.gov-info button {
+  padding: 12px 22px;
+  font-size: 1rem;
+}
+
+
+
+
+
+/* ===== DESKTOP / TABLET ===== */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .nav-links li {
+    border: none;
+  }
+
+  .nav-links a {
+    padding: 0 15px;
+  }
+
+  .product {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .perfume {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .third-perfume {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .third-perfume img {
+    width: 100%;
+  }
+  .gov {
+    padding: 40px 15px;
+  }
+
+  .gov-info h1 {
+    font-size: 1.7rem;
+  }
+
+  .gov-info p {
+    font-size: 0.95rem;
+  }
+ 
+}
